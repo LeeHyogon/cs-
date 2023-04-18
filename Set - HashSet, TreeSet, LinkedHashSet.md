@@ -4,12 +4,10 @@ Set은 순서가 없고 중복을 허용하지 않는 자료구조이다.
         
       
 ### HashSet
-HashSet은 Set 인터페이스를 구현하며, 내부적으로 HashMap을 사용하여 요소들을 저장한다.
-HashSet은 Set의 특성상 중복되는 요소를 허용하지 않으며, 요소의 순서도 유지하지 않는다.
-즉, 요소의 저장 순서와 출력 순서가 다를 수 있다.
-HashSet의 경우 Hash 알고리즘 기반으로 동작
-
-HashSet은 내부적으로 HashMap의 key를 이용하여 데이터를 저장하기 때문에 검색, 삽입, 삭제에 대해 상수시간(O(1))으로 처리할 수 있다.
+* HashSet은 Set 인터페이스를 구현하며, 내부적으로 HashMap을 사용하여 요소들을 저장한다.</br>
+* HashSet은 Set의 특성상 중복되는 요소를 허용하지 않으며, 요소의 순서도 유지하지 않는다.즉, 요소의 저장 순서와 출력 순서가 다를 수 있다.</br>
+* HashSet의 경우 Hash 알고리즘 기반으로 동작.</br>
+* HashSet은 내부적으로 HashMap의 key를 이용하여 데이터를 저장하기 때문에 검색, 삽입, 삭제에 대해 상수시간(O(1))으로 처리할 수 있다.</br>
 
 #### HashSet의 시간복잡도 O(h/n) 
 
@@ -29,18 +27,19 @@ HashSet에서 요소를 검색하려면 먼저 해당 요소의 해시 값과 �
 
 
 ### TreeSet
-TreeSet은 이진 검색 트리(Binary Search Tree)를 사용하여 요소를 저장한다.
-TreeSet의 경우 이진트리의 향상된 버전인 Red-Black Tree를 기반으로 만들어진다.
-TreeSet은 Set의 특성상 중복되는 요소를 허용하지 않으며, 저장된 요소들은 오름차순 정렬되어 저장된다. 
+* TreeSet은 이진 검색 트리(Binary Search Tree)를 사용하여 요소를 저장한다.
+* TreeSet의 경우 이진트리의 향상된 버전인 Red-Black Tree를 기반으로 만들어진다.
+* TreeSet은 Set의 특성상 중복되는 요소를 허용하지 않으며, 저장된 요소들은 오름차순 정렬되어 저장된다. 
 
 TreeSet의 시간 복잡도는 다음과 같다.
 
-데이터 삽입: O(log n)
-데이터 삭제: O(log n)
-데이터 검색: O(log n)
-최소값/최대값 검색: O(1)
-TreeSet의 최악의 시간 복잡도는 O(n)이 아니라 O(log n)이다. 
-이는 TreeSet이 내부적으로 이진 탐색 트리(Binary Search Tree)를 사용하기 때문이다. 
+- 데이터 삽입: O(log n)
+- 데이터 삭제: O(log n)
+- 데이터 검색: O(log n)
+- 최소값/최대값 검색: O(1)
+</br>
+TreeSet의 최악의 시간 복잡도는 O(n)이 아니라 O(log n)이다. </br>
+이는 TreeSet이 내부적으로 이진 탐색 트리(Binary Search Tree)를 사용하기 때문이다. </br>
 따라서 TreeSet에서 데이터를 삽입하거나 삭제하거나 검색하는 경우, 
 이진 탐색 트리의 높이(height)에 따라 시간 복잡도가 결정된다. 
 이진 탐색 트리의 높이는 데이터의 추가 순서에 따라 달라질 수 있지만, 
@@ -51,12 +50,13 @@ TreeSet의 최악의 시간 복잡도는 O(n)이 아니라 O(log n)이다.
  AVL 트리나 레드-블랙 트리와 같은 균형 잡힌 이진 탐색 트리를 사용하는 것이 좋다.
 
 ### LinkedHashSet
-LinkedHashSet은 HashSet과 비슷하게 Set 인터페이스를 구현하며, 내부적으로 LinkedHashMap을 사용하여 요소들을 저장한다. 
+* LinkedHashSet은 HashSet과 비슷하게 Set 인터페이스를 구현하며, 내부적으로 LinkedHashMap을 사용하여 요소들을 저장한다. 
 
-LinkedHashSet은 삽입 순서를 보장하기 때문에, 삽입 순서대로 데이터를 처리해야 할 경우 사용할 수 있다.
+* LinkedHashSet은 삽입 순서를 보장하기 때문에, 삽입 순서대로 데이터를 처리해야 할 경우 사용할 수 있다.
 
-HashSet은 내부적으로 HashMap을 사용하고, TreeSet은 이진 검색 트리를 사용한다는 점에서 메모리 사용과 시간 복잡도 등에서 차이가 있다.
- LinkedHashSet은 삽입 순서를 보장하면서 중복된 요소를 허용하지 않으므로, HashSet과 TreeSet의 특징을 모두 가지고 있다.
+* HashSet은 내부적으로 HashMap을 사용하고, TreeSet은 이진 검색 트리를 사용한다는 점에서 메모리 사용과 시간 복잡도 등에서 차이가 있다.
+ 
+* LinkedHashSet은 삽입 순서를 보장하면서 중복된 요소를 허용하지 않으므로, HashSet과 TreeSet의 특징을 모두 가지고 있다.
 
 
         
