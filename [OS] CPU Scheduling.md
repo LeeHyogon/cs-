@@ -1,9 +1,9 @@
-## 1.CPU 스케줄링 (CPU Scheduling)
+## CPU 스케줄링 (CPU Scheduling)
 
 - CPU를 사용할 수 있는 프로세스를 선택하고, CPU를 할당하는 작업을 말한다. 
 - CPU 이용률을 최대화하기 위해 항상 실행 중인 프로세스를 가지게 하는데 있다.
 
-### 1.1 CPU 스케줄러 
+### 1. CPU 스케줄러 
 
 - 실행 준비가 되어 있는 메모리 내의 프로세스 중에서 선택하여, 이들 중 하나에게 CPU를 할당한다.
 
@@ -18,7 +18,7 @@
 
 이러한 여러 Job이 섞여있기 때문에 CPU 스케줄링이 필요하다.
 
-### 1.2 선점 및 비선점 스케줄링 (Preemptive and Nonpreemptive Scheduling)
+### 2. 선점 및 비선점 스케줄링 (Preemptive and Nonpreemptive Scheduling)
 
 CPU Scheduler는 메모리에서 Ready 상태의 프로세스 중 어떤 프로세스를 CPU에 할당해줄지 선택한다. CPU 스케줄링으로 인해 변경되는 프로세스의 상태는 다음과 같다. 
  
