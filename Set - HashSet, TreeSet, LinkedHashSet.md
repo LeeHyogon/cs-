@@ -4,8 +4,8 @@ Set은 순서가 없고 중복을 허용하지 않는 자료구조이다.
         
       
 ### HashSet
-* HashSet은 Set 인터페이스를 구현하며, 내부적으로 HashMap을 사용하여 요소들을 저장한다.</br>
-* HashSet은 Set의 특성상 중복되는 요소를 허용하지 않으며, 요소의 순서도 유지하지 않는다.즉, 요소의 저장 순서와 출력 순서가 다를 수 있다.</br>
+* Set 인터페이스를 구현하며, 내부적으로 HashMap을 사용하여 요소들을 저장한다.</br>
+* 요소의 저장 순서와 출력 순서가 다를 수 있다.</br>
 
 #### HashSet의 시간복잡도 
 - 데이터 삽입: O(1)
@@ -30,9 +30,8 @@ HashSet에서 요소를 검색하려면 먼저 해당 요소의 해시 값과 �
 
 
 ### TreeSet
-* TreeSet은 이진 검색 트리(Binary Search Tree)를 사용하여 요소를 저장한다.
-* TreeSet의 경우 이진트리의 향상된 버전인 Red-Black Tree를 기반으로 만들어진다.
-* TreeSet은 Set의 특성상 중복되는 요소를 허용하지 않으며, 저장된 요소들은 오름차순 정렬되어 저장된다. 
+* 이진트리의 향상된 버전인 Red-Black Tree를 기반으로 만들어진다.
+* 저장된 요소들은 오름차순 정렬되어 저장된다. 
 
 #### TreeSet의 시간 복잡도
 - 데이터 삽입: O(log n)
@@ -51,13 +50,8 @@ TreeSet의 최악의 시간 복잡도는 O(n)이 아니라 O(log n)이다. </br>
 
 
 ### LinkedHashSet
-* LinkedHashSet은 HashSet과 비슷하게 Set 인터페이스를 구현하며, 내부적으로 LinkedHashMap을 사용하여 요소들을 저장한다. 
-
-* LinkedHashSet은 삽입 순서를 보장하기 때문에, 삽입 순서대로 데이터를 처리해야 할 경우 사용할 수 있다.
-
-* HashSet은 내부적으로 HashMap을 사용하고, TreeSet은 이진 검색 트리를 사용한다는 점에서 메모리 사용과 시간 복잡도 등에서 차이가 있다.
- 
-* LinkedHashSet은 삽입 순서를 보장하면서 중복된 요소를 허용하지 않으므로, HashSet과 TreeSet의 특징을 모두 가지고 있다.
+* Set 인터페이스를 구현하며, 내부적으로 LinkedHashMap을 사용하여 요소들을 저장한다. 
+* 삽입 순서를 보장한다.
 
 #### LinkedHashSet의 시간복잡도 
 - 데이터 삽입: O(1)
