@@ -39,14 +39,10 @@ int main() {
 		else
 			girl_plus.push_back(a);
 	}
-	if(!man_plus.empty())
-		sort(man_plus.begin(), man_plus.end());
-	if (!girl_plus.empty())
-		sort(girl_plus.begin(), girl_plus.end());
-	if (!man_minus.empty())
-		sort(man_minus.begin(), man_minus.end());
-	if(!girl_minus.empty())
-		sort(girl_minus.begin(), girl_minus.end());
+	sort(man_plus.begin(), man_plus.end());
+	sort(girl_plus.begin(), girl_plus.end());
+	sort(man_minus.begin(), man_minus.end());
+	sort(girl_minus.begin(), girl_minus.end());
 	int ret = 0;
 	int gp_pos = 0; int mm_pos = 0;
 	while (1) {
