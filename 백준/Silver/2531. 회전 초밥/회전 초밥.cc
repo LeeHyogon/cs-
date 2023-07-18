@@ -29,27 +29,16 @@ int main() {
 	for (int i = 0; i < N; i++)
 		cin >> food[i];
 
-	for (int j = 0; j < k; j++) {
-		int foodNum = food[j];
-		if (m[foodNum] == 0) {
-			counter++;
-		}
-		m[foodNum]++;
-	}
-	if (m[c] == 0) {
-		ret = max(ret, counter + 1);
-	}
-	else {
-		ret = max(ret, counter);
-	}
 
-	for (int i = k; i < N + k - 1; i++) {
-		int removeFood = food[(i - k) % N];
+	for (int i = 0; i < N + k; i++) {
+		if (i >= k) {
+			int removeFood = food[(i - k) % N];
+			m[removeFood]--;
+			if (m[removeFood] == 0)
+				counter--;
+		}
 		int newFood = food[i%N];
-		
-		m[removeFood]--;
-		if (m[removeFood] == 0)
-			counter--;
+
 		if (m[newFood] == 0) {
 			counter++;
 		}
