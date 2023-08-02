@@ -16,31 +16,38 @@ using namespace std;
 typedef long long ll;
 typedef pair<int, int > pii;
 
+
+int arr[2000002];
 int n;
-int arr[1000001];
+
 int x;
-set<int> s;
 int ret = 0;
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cin >> n;
 	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
+		int t;
+		cin >> t;
+		arr[t]++;
 	}
 	cin >> x;
+	int ret = 0;
 
-	for (int i = 0; i < n; i++) {
-		if (arr[i] >= x)
-			continue;
-		auto it = s.find(arr[i]);
-		if (it == s.end()) {
-			s.insert(x - arr[i]);
+	if (x % 2 == 0) {
+		for (int i = 1; i <= x / 2 - 1; i++) {
+			ret += (arr[i] * arr[x - i]);
 		}
-		else
-			ret++;
+		ret += ((arr[x / 2] * (arr[x / 2] - 1)) / 2);
+	}
+	else {
+		for (int i = 1; i <= x / 2; i++) {
+			ret += (arr[i] * arr[x - i]);
+		}
 	}
 	cout << ret;
+
+	
 	return 0;
 }
 
