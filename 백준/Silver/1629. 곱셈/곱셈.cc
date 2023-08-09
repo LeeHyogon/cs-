@@ -25,17 +25,18 @@ ll Pow(ll A, ll B) {
 	if (B == 1) {
 		return A % C;
 	}
-	if (B % 2 == 1) {
-		return ((Pow(A, B / 2) % C) * (Pow(A, B / 2 + 1) % C)) % C;
-	}
-	else
-		return ((Pow(A, B / 2) % C) * (Pow(A, B / 2) % C)) % C;
+	ll k = Pow(A, B / 2) % C;
+
+	if (B % 2 == 1)
+		return k * k%C*A%C;
+	return k * k%C;
+
 }
 
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-	
+
 	cin >> A >> B >> C;
 
 
