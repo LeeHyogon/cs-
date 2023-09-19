@@ -12,12 +12,13 @@
 using namespace std;
 #define INF 987654321
 #define LINF 321321321321
-#define M 5
-#define MAX_CHILDREN M
-#define MAX_KEYS MAX_CHILDREN-1
-#define MIN_KEYS (int)(ceilM(2.0))-1 //최소 키 갯수 구하는 식
 typedef long long ll;
 
+
+// Minimum degree count : t
+// Minimum key 갯수: t - 1
+// Maximum degree count : 2*t
+// Maximum key count : 2*t -1
 class BTreeNode {
 	int *keys; // key 배열
 	int t; // 최소 자식 갯수 minimum degree
