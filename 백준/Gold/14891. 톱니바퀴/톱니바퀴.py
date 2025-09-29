@@ -11,16 +11,14 @@ def moveWheel(num, dir) :
 
 def pick(num, dir, visited):
     visited[num] = 1
-    ori_wheel = wheel[num]
     
-    moveWheel(num,dir)
-    if 0<=num<=2 and ori_wheel[2] != wheel[num+1][6] and visited[num+1] == 0:
+    if 0<=num<=2 and wheel[num][2] != wheel[num+1][6] and visited[num+1] == 0:
         pick(num+1,dir * -1, visited)
 
-    if 1<=num<=3 and (ori_wheel[6] != wheel[num-1][2]) and visited[num-1] == 0:
+    if 1<=num<=3 and wheel[num][6] != wheel[num-1][2] and visited[num-1] == 0:
         pick(num-1,dir * -1 ,visited)
-    
-
+        
+    moveWheel(num,dir)
 
 for cnt in range(K):
     visited = [0]*4
